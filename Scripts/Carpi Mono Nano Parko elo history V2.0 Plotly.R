@@ -5,7 +5,7 @@ require("anytime")
 require("plotly")
 library(plotly)
 library(htmlwidgets)
-setwd(dir = "C:/Users/Tostado Admin/Desktop/Desktop/cryptogain2.0-main")
+
 
 alan <- paste("https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&steam_id=76561199207580572&count=1000")
 alanhr <- GET(alan)
@@ -13,7 +13,6 @@ alanhr_text <- content(alanhr, "text")
 alanhr_json <- fromJSON(alanhr_text, flatten = TRUE)
 alandf <- as.data.frame(alanhr_json)
 alandf <-cbind(alandf, player='alanthekat')
-
 
 dicopato <- paste("https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&steam_id=76561199195740571&count=1000")
 dicopatohr <- GET(dicopato)
@@ -55,21 +54,14 @@ todos <- mutate(todos, Date = anydate(timestamp))
 todos <- select(todos, !timestamp)
 todos <- arrange(todos, Date)
 
-
 fig <- plot_ly(data = todos, x = ~Date, y = ~rating, color = ~player, mode = 'lines+markers')
-#Los colores no funcionan. revisar como se puede hacer
-
-
 widget_file_size <- function(fig) {
   d <- tempdir()
   withr::with_dir(d, htmlwidgets::saveWidget(fig, "index.html"))
   f <- file.path(d, "index.html")
   mb <- round(file.info(f)$size / 1e6, 3)
   message("File is: ", mb," MB")
-  
-}
-
-
+ }
 fig
 
 saveWidget(fig, "Elo_Chart.html", selfcontained = F, libdir = "lib")
