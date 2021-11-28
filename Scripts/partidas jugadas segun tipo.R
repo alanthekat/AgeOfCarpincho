@@ -6,7 +6,7 @@ require("jsonlite")
 library(plotly)
 library(htmlwidgets)
 
-
+setwd(dir = "C:/Users/Alan/Documents/GitHub/AgeOfCarpincho/assets/charts")
 alan <- paste("https://aoe2.net/api/player/matches?game=aoe2de&steam_id=76561198153797281&count=1000")
 alanhr <- GET(alan)
 alanhr_text <- content(alanhr, "text")
@@ -82,10 +82,4 @@ fig <- fig %>% layout(barmode = 'stack', type = 'aggregate')
 fig
 saveWidget(fig, "partidas_tipo.html", selfcontained = F, libdir = "lib")
 
-ggplot(todos2)+
-  geom_bar(aes(x=player, fill=type))+
-  labs(title = "Cantidad de partidas por jugador, por tipo.",
-       subtitle = "AoE II Definitive Edition",
-       x = "Jugador",
-       y = "Cantidad de partidas") 
-ggsave("partidas_tipo.png")
+
