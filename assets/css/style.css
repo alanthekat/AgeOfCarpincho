@@ -21,6 +21,8 @@ img.a {
     border: 1px solid steelblue;
     padding: 30px;
     border-radius: 5px;
+    background-color: #383d49;
+
 }
 
 h1 {
@@ -43,6 +45,7 @@ h1 {
 	padding: 25px;
 	position: absolute;
 	background-color: #2C323D;
+	
 }
 
 #header {
