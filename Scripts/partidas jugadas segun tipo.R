@@ -6,7 +6,7 @@ require("jsonlite")
 library(plotly)
 library(htmlwidgets)
 
-setwd(dir = "C:/Users/Alan/Documents/GitHub/AgeOfCarpincho/assets/charts")
+setwd(dir = "C:/Users/Tostado Admin/Documents/AgeOfCarpincho/assets/charts")
 alan <- paste("https://aoe2.net/api/player/matches?game=aoe2de&steam_id=76561198153797281&count=1000")
 alanhr <- GET(alan)
 alanhr_text <- content(alanhr, "text")

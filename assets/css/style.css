@@ -13,6 +13,17 @@ img.a {
   vertical-align: text-bottom;
 }
 
+.header2{
+    max-width: 90%;
+    margin: 30px auto;
+    overflow: auto;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+    background: rgba(29, 32, 38, 0.8);
+
+}
+
 .container{
     max-width: 90%;
     margin: 30px auto;
@@ -21,6 +32,8 @@ img.a {
     border: 1px solid steelblue;
     padding: 30px;
     border-radius: 5px;
+    background: rgba(29, 32, 38, 0.8);
+
 }
 
 h1 {
@@ -33,17 +46,6 @@ h1 {
   margin-top: 0;
 
   }
-
-#container {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 700px;
-	overflow: hidden;
-	padding: 25px;
-	position: absolute;
-	background-color: #2C323D;
-}
 
 #header {
 	font-size: 45px;

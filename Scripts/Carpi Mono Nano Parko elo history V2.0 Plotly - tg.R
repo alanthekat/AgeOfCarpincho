@@ -6,7 +6,7 @@ require("plotly")
 library(plotly)
 library(htmlwidgets)
 
-setwd(dir = "C:/Users/Alan/Documents/GitHub/AgeOfCarpincho/assets/charts")
+setwd(dir = "C:/Users/Tostado Admin/Documents/AgeOfCarpincho/assets/charts")
 alan <- paste("https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&steam_id=76561199207580572&count=1000")
 alanhr <- GET(alan)
 alanhr_text <- content(alanhr, "text")
