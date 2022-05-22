@@ -63,5 +63,10 @@ widget_file_size <- function(fig) {
   message("File is: ", mb," MB")
  }
 fig
-
 saveWidget(fig, "Elo_Chart.html", selfcontained = F, libdir = "lib")
+
+
+figQty <- plot_ly(todos, y = ~player, type = 'histogram')
+
+figQty
+saveWidget(figQty, "partidas_tipo.html", selfcontained = F, libdir = "lib")
