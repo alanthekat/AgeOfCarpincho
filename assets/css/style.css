@@ -5,9 +5,12 @@
 	text-decoration:none;
 	text-align: center;
 	color: #FFFFFF;
-}
+	}
 
-body {background-color: #1F2229;}
+body {
+	background-color: #1F2229; 
+    background-size: 100%;
+}
 
 img.a {
   vertical-align: text-bottom;
